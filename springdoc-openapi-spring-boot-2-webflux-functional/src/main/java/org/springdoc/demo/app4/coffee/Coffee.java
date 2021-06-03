@@ -1,14 +1,13 @@
 package org.springdoc.demo.app4.coffee;
 
 import java.util.Objects;
+import java.util.UUID;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document
 public class Coffee {
     @Id
-    private String id;
+    private String id ;
     private String name;
 
     public Coffee() {
@@ -16,6 +15,7 @@ public class Coffee {
 
     public Coffee(String name) {
         this.name = name;
+        this.id=UUID.randomUUID().toString();
     }
 
     public Coffee(String id, String name) {

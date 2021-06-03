@@ -38,3 +38,9 @@ docker pull springdocdemos/springdoc-openapi-spring-boot-2-webflux:latest
 docker run --rm -p 8080:8080 springdocdemos/springdoc-openapi-spring-boot-2-webflux:latest
 ```
 
+DOCKER_BUILDKIT=1 docker build -t springdoc-openapi-spring-boot-2-webflux -f springdoc-openapi-spring-boot-2-webflux/Dockerfile .
+
+
+docker run --rm -d --privileged -p 8081:8080 springdoc-openapi-spring-boot-2-webflux:latest
+
+docker run springdoc-openapi-spring-boot-2-webflux 
